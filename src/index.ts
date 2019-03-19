@@ -15,3 +15,19 @@ console.log( "EPSG4326 reverse to LatLng (for Mapbox) = [" + latLng3857 + "]" );
 
 const epsg3857XY: [number, number] = proj3857(latLng3857);
 console.log( "EPSG3857 XY of the reverset LatLng = [" + epsg3857XY + "]" );
+
+// input - original coordinate
+// output - coordinate for mapbox
+function forward(coordination: [number, number]) : [number, number] {
+  return proj3857.invert(proj4326(coordination));
+}
+
+// input - coordinate in mapbox
+// output - original coordinate
+function reverse(coordination: [number, number]) : [number, number] {
+  return proj4326.invert(proj3857(coordination));
+}
+
+console.log( "Original = [" + coordinate + "]");
+console.log("forward = [" + forward(coordinate) + "]");
+console.log("reverse = [" + reverse(forward(coordinate)) + "]");
