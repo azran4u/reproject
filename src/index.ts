@@ -14,7 +14,7 @@ const latLng3857: [number, number] = proj3857.invert(epsg4326XY);
 console.log( "EPSG4326 reverse to LatLng (for Mapbox) = [" + latLng3857 + "]" );
 
 const epsg3857XY: [number, number] = proj3857(latLng3857);
-console.log( "EPSG3857 XY of the reverset LatLng = [" + epsg3857XY + "]" );
+console.log( "EPSG3857 XY of the reversed LatLng = [" + epsg3857XY + "]" );
 
 // input - original coordinate
 // output - coordinate for mapbox
