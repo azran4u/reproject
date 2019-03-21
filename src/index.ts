@@ -3,8 +3,8 @@ import {GeoProjection, geoEquirectangular, geoMercator} from "d3-geo";
 const proj4326: GeoProjection = geoEquirectangular();
 const proj3857: GeoProjection = geoMercator();
 
-// const coordinate: [number, number] = [34.956806299325386, 32.82589141525937]; // Haifa
-const coordinate: [number, number] = [35.19071102142334, 33.27171288126284]; // Zor
+const coordinate: [number, number] = [34.956806299325386, 32.82589141525937]; // Haifa
+// const coordinate: [number, number] = [35.19071102142334, 33.27171288126284]; // Zor
 console.log( "Original LatLng: [" + coordinate + "]");
 
 const epsg4326XY: [number, number] = proj4326(coordinate);

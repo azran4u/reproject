@@ -3,6 +3,7 @@
         "epsg",
         "equirectangular",
         "geo",
+        "mapbox",
         "xy"
     ]
 }
